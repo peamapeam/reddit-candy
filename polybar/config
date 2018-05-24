@@ -1,0 +1,52 @@
+;=====================================================
+;     File Includes
+;=====================================================
+
+[section/base]
+include-file = /home/peama/.config/polybar/master.conf
+include-file = /home/peama/.config/polybar/modules.conf
+
+
+;=====================================================
+;     Openbox Bars
+;=====================================================
+
+[bar/openbox-bar]
+inherit = bar/master
+
+; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
+monitor =
+
+modules-left   = menu workspaces
+modules-center = battery clock keyboard   
+modules-right  = memory  network volume mpd
+
+
+;=====================================================
+;     i3 Bars
+;=====================================================
+
+[bar/i3-bar]
+inherit = bar/master
+
+; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
+monitor =
+
+modules-left   = i3 
+modules-center = title
+modules-right  = clock  keyboard battery volume-bar
+
+
+;=====================================================
+;     Bspwm Bars
+;=====================================================
+
+[bar/bspwm-bar]
+inherit = bar/master
+
+; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
+monitor =
+
+modules-left   = bspwm menu
+modules-center = clock
+modules-right  = pkg memory temperature coreuse network volume
